@@ -1,0 +1,228 @@
+#bk{
+    background-image: url(szachownica.png.avif);
+    filter: blur(4px);
+    height: 100vh;
+    width: 100vw;
+    background-position: center;
+    background-repeat: repeat;
+    background-size: contain;
+}
+
+
+
+#Plansza{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+
+}
+
+.Blok{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px;
+    border-radius: 8px;
+    width: 230px;
+    height: 370px;
+    padding: 30px;
+    background-color: #725F5F;
+
+}
+.Blok:last-child{
+    margin-left: auto;
+    margin-right: 150px;
+    width: 200px;
+    height: 370px;
+}
+
+
+.Zakladki{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 100px;
+    background-color: #5C2A2A;
+    margin: 12px;
+    border-radius: 8px;
+    color: rgb(222, 209, 209);
+    font-size: 24px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.Zakladki:hover {
+    background-color: #762e2e;; /* Kolor przycisku po najechaniu */
+}
+
+.Zakladki:active{
+    background-color: #542929;; /* Kolor przycisku po najechaniu */
+}
+#play:hover {
+    background-color: #913a3a;; /* Kolor przycisku po najechaniu */
+}
+
+#play:active{
+    background-color: #542929;; /* Kolor przycisku po najechaniu */
+}
+#play{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 105%;
+    height: 35px;
+    background-color: #5C2A2A;
+    margin: 15px;
+    border-radius: 8px;
+    font-size: 28px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(255, 255, 255);
+    font-weight:600
+
+}
+
+.Bloczki{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 90px;
+    background-color: #5C2A2A;
+    margin: 15px;
+    border-radius: 8px;
+    color: rgb(222, 209, 209);
+    font-size: 42px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    cursor: pointer;
+    
+
+}
+
+.Bloczki:hover {
+    background-color: #762e2e;; /* Kolor przycisku po najechaniu */
+}
+
+.Bloczki:active{
+    background-color: #542929;; /* Kolor przycisku po najechaniu */
+}
+#szybkie{
+    display: flex;
+    color: rgb(222, 209, 209);
+    font-size: 25px;
+    margin-top: 0%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+
+}
+
+#ranking{
+    display: flex;
+    justify-content: start;
+    align-items:center;
+    flex-direction: column;
+    height: 430px;
+    width: 350px;
+    border-radius: 8px;
+    background-color: #635050;
+    margin-top: 50px;
+    margin-left: 185px;
+    margin-right: 185px;
+    font-size: 40px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(222, 209, 209);
+    letter-spacing: 1px;
+    line-height: 35px;
+}
+
+.linie{
+    display: flex;
+    width: 100%;
+    height: 1px;
+    margin-top: 34px;
+    background-color: black;
+}
+
+#rank{
+    margin-top: 10px;
+    margin-bottom: 0%;
+}
+
+.bloki1{
+    display: flex;
+    justify-content: start;
+    align-items:center;
+    flex-direction: column;
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    background-color: #635050;
+    margin-top: 550px;
+    margin-left: 50px;
+    border-radius: 10px;
+    font-size: 35px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* font-weight: 550; */
+}
+.bloki2{
+    display: flex;
+    justify-content: start;
+    align-items:center;
+    flex-direction: column;
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    background-color: #635050;
+    margin-top: 550px;
+    margin-left: 605px;
+    border-radius: 10px;
+    font-size: 35px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* font-weight: 550; */
+}
+.bloki3{
+    display: flex;
+    justify-content: start;
+    align-items:center;
+    flex-direction: column;
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    background-color: #635050;
+    margin-top: 550px;
+    margin-left: 1155px;
+    border-radius: 10px;
+    font-size: 35px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* font-weight: 550; */
+}
+/* Ranking graczy */
+.bloczek{
+    padding-top: 0px;
+    margin-top: 15px;
+    width: 90%;
+    height: 65%;
+    background-color: #4C2727;
+    border-radius: 8px;
+
+}
+
+/* Rectangle 14 */
+
+
+.napisy{
+    margin-top: 0%;
+    margin-bottom: 0%;
+    padding-bottom: 0%;
+    color: rgb(222, 209, 209);
+}
+
+
+
+button{
+    border: 0px;
+}
