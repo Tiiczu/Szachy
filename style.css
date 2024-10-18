@@ -8,7 +8,9 @@
     background-size: contain;
 }
 
-
+*{
+    overflow:hidden
+}
 
 #Plansza{
     display: flex;
@@ -62,29 +64,7 @@
 .Zakladki:active{
     background-color: #542929;; /* Kolor przycisku po najechaniu */
 }
-#play:hover {
-    background-color: #913a3a;; /* Kolor przycisku po najechaniu */
-}
 
-#play:active{
-    background-color: #542929;; /* Kolor przycisku po najechaniu */
-}
-#play{
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 105%;
-    height: 35px;
-    background-color: #5C2A2A;
-    margin: 15px;
-    border-radius: 8px;
-    font-size: 28px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: rgb(255, 255, 255);
-    font-weight:600
-
-}
 
 .Bloczki{
     display: flex;
@@ -118,6 +98,10 @@
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
 
+}
+
+.Zakladki:nth-child(1){
+    transform: scale(1.2);
 }
 
 #ranking{
