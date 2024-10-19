@@ -1,0 +1,112 @@
+
+#bk{
+    background-image: url(animeczaro.jpg);
+    filter: blur(4px);
+    height: 100vh;
+    width: 100vw;
+    background-position: center;
+    background-repeat: repeat;
+    background-size: contain;
+    margin: 0px;
+    padding: 0px;
+    opacity: 0.6;
+}
+
+*{
+    overflow:hidden
+}
+
+#plansza2{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+
+}
+
+.szachownica{
+    flex-wrap: wrap;
+    display: flex;
+    width: 600px;
+    height: 600px;
+    margin-left: 450px;
+    margin-top: 70px;
+}
+
+.bloczki2{
+    background-color: black;
+    opacity: 0.6;
+    height: 75px;
+    width: 75px;
+
+
+}
+
+.bloczki3{
+    background-color: rgb(255, 255, 255);
+    height: 75px;
+    width: 75px;
+    opacity: 0.6;
+
+
+}
+
+.czat{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+    position: absolute;
+    width: 350px;
+    height: 530px;
+    background-color: rgb(157, 152, 152);
+    border-radius: 4px;
+    margin-top: 90px;
+    margin-left: 47px;
+    opacity: 0.8;
+
+}
+
+
+.napisy2{
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 500;
+    margin-right: 16px;
+    margin-bottom: 5px;
+    margin-top: 0px;
+}
+
+.kreska{
+    width: 100%;
+    height: 1px;
+    background-color: black;
+}
+
+#ruchy{
+    margin-top: 90px;
+    height: 600px;
+    width: 350px;
+    background-color: rgb(157, 152, 152);
+    opacity: 0.8;
+    border-radius: 4px;
+    margin-left: 40px;
+
+}
+
+.figury{
+    cursor: move; /* fallback if grab cursor is unsupported */
+    cursor: -moz-grabbing;
+    cursor: grab;
+    position: absolute;
+
+}
+
+.figury:active{
+    cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+    position: absolute;
+}

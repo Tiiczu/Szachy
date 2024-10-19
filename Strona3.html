@@ -1,64 +1,76 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Strona3</title>
-    <link rel="stylesheet" href="style3.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Przeciąganie figur</title>
+  <style>
+    .figury {
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      cursor: pointer;
+    }
+    .red {
+      background-color: red;
+      top: 100px;
+      left: 100px;
+    }
+    .blue {
+      background-color: blue;
+      top: 250px;
+      left: 250px;
+    }
+  </style>
 </head>
 <body>
-    <!-- BLOK1 -->
-    <div id="blok1">
-        <div id="logosony">
-            <img id="sony1" src="sony.png">
-        </div>
-    </div>
 
+  <!-- Figury do przeciągania -->
+  <div class="figury red"></div>
+  <div class="figury blue"></div>
 
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const figures = document.querySelectorAll('.figury'); // Zmieniono na 'figury'
+      let isDragging = false;
+      let activeFigure = null;
+      let offsetX = 0;
+      let offsetY = 0;
 
-    <!-- BLOK2 -->
-    <div id="blok2">
-        <div id="blok2L">
-            <p class="Zakladki">Gry</p>
-            <p class="Zakladki">PS5</p>
-            <p class="Zakladki">PS4</p>
-            <p class="Zakladki">Usługi</p>
-            <p class="Zakladki">Akcesoria</p>
-            <p class="Zakladki">Wiadomości</p>
-            <p class="Zakladki">Sklep</p>
-            <p class="Zakladki" style="color: blue;" >Pomoc Techniczna</p>
-            
-        </div>
-        <div id="blok2R">
-            <div id="Niebieski">
-                <p id="W"><b>Wypisz się</b></p>
-            </div>
-        </div>
-    
-    </div>
+      figures.forEach(figury => {
+        // Wyłączamy domyślne menu kontekstowe, gdy klikniemy prawym przyciskiem
+        figury.addEventListener('contextmenu', (e) => {
+          e.preventDefault();
+        });
 
+        // Obsługa przytrzymania lewego przycisku myszy
+        figury.addEventListener('mousedown', (e) => {
+          if (e.button === 0) { // 0 oznacza lewy przycisk myszy
+            isDragging = true;
+            activeFigure = figury;
+            // Obliczamy offset między myszką a figurą
+            offsetX = e.clientX - figury.getBoundingClientRect().left;
+            offsetY = e.clientY - figury.getBoundingClientRect().top;
+          }
+        });
+      });
 
-    <!-- BLOK3 -->
-    <div id="main">
-        <h1 id="FIFA">
-            FIFA24
-        </h1>
-        <h2 id="DLA">
-            DLA KLUBU
-        </h2>
-        <div id="lorem">
-            <p class="tekst">Lorem ipsum dolor sit amet consectetur adipisicing</p>
-            <p class="tekst">elit. Perspiciatis hic quae officia distinctio </p>
-            <p class="tekst">fugiat expedita tempore corporis deserunt nemo eaque</p>
-            <p class="tekst">amet illum, sequi voluptatem id atque sit facilis cum molestiae.</p>
-        </div>
-        <div id="Bialy">
-            <a href="https://www.w3schools.com/tags/tag_a.asp"><b>Zamów w przedsprzedaży</b></a>
-        </div>
-    </div>
+      // Kiedy puścimy przycisk myszy
+      document.addEventListener('mouseup', () => {
+        isDragging = false;
+        activeFigure = null; // Zerujemy aktywną figurę
+      });
 
-
-
+      // Kiedy ruszamy myszką
+      document.addEventListener('mousemove', (e) => {
+        if (isDragging && activeFigure) {
+          // Ustawiamy nową pozycję figury, uwzględniając offset
+          activeFigure.style.left = `${e.pageX - offsetX}px`;
+          activeFigure.style.top = `${e.pageY - offsetY}px`;
+        }
+      });
+    });
+  </script>
 
 </body>
 </html>
