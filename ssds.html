@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play</title>
+    <link rel="stylesheet" href="style1.css">
+    <style>
+        .figury {
+            position: absolute; /* Kluczowa zmiana: absolutne pozycjonowanie */
+            cursor: pointer;
+        }
+
+        .czat {
+            position: absolute; /* Pozycjonowanie czatu */
+            bottom: 20px; /* Odstęp od dołu */
+            left: 20px; /* Odstęp od lewej */
+            width: 300px; /* Szerokość czatu */
+            background-color: rgba(255, 255, 255, 0.9); /* Tło czatu */
+            border: 1px solid #ccc; /* Ramka wokół czatu */
+            padding: 10px; /* Odstęp wewnętrzny */
+            z-index: 10; /* Aby czat był na wierzchu */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Cień dla lepszego efektu */
+        }
+
+        .napisy2 {
+            margin: 0; /* Reset marginesu */
+            font-size: 16px; /* Rozmiar czcionki */
+            font-weight: bold; /* Pogrubiona czcionka */
+        }
+
+        #input-message {
+            width: 100%; /* Szerokość pola tekstowego */
+            padding: 5px; /* Odstęp wewnętrzny */
+            margin-top: 10px; /* Odstęp od napisu */
+        }
+    </style>
+</head>
+<body>
+    <div id="bk"></div>
+    <div id="plansza2">
+        <div class="szachownica">
+            <div class="bloczki3">
+                <img class="figury" src="rook.png" alt="rook" width="75" height="75">
+            </div>
+            <div class="bloczki2">
+                <img class="figury" src="horse.png" alt="horse" width="75" height="75">
+            </div>
+            <!-- Dodaj tutaj pozostałe figury zgodnie z Twoim układem szachownicy -->
+        </div>
+
+        <div class="czat">
+            <div class="kreska"></div>
+            <p class="napisy2">Napisz do przeciwnika</p>
+            <input type="text" id="input-message" placeholder="Wpisz wiadomość...">
+        </div>
+
+        <div id="ruchy"></div>
+    </div>
+
+    <script src="index.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const figures = document.querySelectorAll('.figury');
+            let isDragging = false;
+            let activeFigure = null;
+            let offsetX = 0;
+            let offsetY = 0;
+
+            figures.forEach(figury => {
+                figury.addEventListener('contextmenu', (e) => {
+                    e.preventDefault();
+                });
+
+                figury.addEventListener('mousedown', (e) => {
+                    if (e.button === 0) { // Lewy przycisk myszy
+                        isDragging = true;
+                        activeFigure = figury;
+                        offsetX = e.clientX - figury.getBoundingClientRect().left;
+                        offsetY = e.clientY - figury.getBoundingClientRect().top;
+                    }
+                });
+            });
+
+            document.addEventListener('mouseup', () => {
+ 

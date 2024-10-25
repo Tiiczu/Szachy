@@ -38,3 +38,23 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+
+  function usunPlaceholder() {
+    const div = document.querySelector('.napisy2');
+    const placeholder = div.querySelector('.placeholder');
+    if (placeholder) {
+        placeholder.remove(); // Usuwa placeholder
+    }
+}
+
+// Funkcja do przywrócenia placeholdera, jeśli div jest pusty
+function pokazPlaceholder() {
+    const div = document.querySelector('.napisy2');
+    if (div.innerHTML.trim() === "") {
+        const placeholderSpan = document.createElement('span');
+        placeholderSpan.classList.add('placeholder');
+        placeholderSpan.textContent = "Kliknij tutaj, aby pisać...";
+        div.appendChild(placeholderSpan); // Przywraca placeholder
+    }
+}

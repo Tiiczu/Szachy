@@ -96,7 +96,7 @@
 
 }
 
-.figury{
+.BlackPawn{
     cursor: move; /* fallback if grab cursor is unsupported */
     cursor: -moz-grabbing;
     cursor: grab;
@@ -104,9 +104,102 @@
 
 }
 
-.figury:active{
+.BlackPawn:active{
     cursor: grabbing;
     cursor: -moz-grabbing;
     cursor: -webkit-grabbing;
     position: absolute;
+}
+
+.BlackRook{
+    cursor: move; /* fallback if grab cursor is unsupported */
+    cursor: -moz-grabbing;
+    cursor: grab;
+    position: absolute;
+
+}
+
+.BlackRook:active{
+        cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+    position: absolute;
+}
+
+.BlackHorse{
+    cursor: move; /* fallback if grab cursor is unsupported */
+    cursor: -moz-grabbing;
+    cursor: grab;
+    position: absolute;
+
+}
+
+.BlackHorse:active{
+        cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+    position: absolute;
+}
+
+.BlackBishop{
+    cursor: move; /* fallback if grab cursor is unsupported */
+    cursor: -moz-grabbing;
+    cursor: grab;
+    position: absolute;
+
+}
+
+.BlackBishop:active{
+        cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+    position: absolute;
+}
+
+
+.BlackKing{
+    cursor: move; /* fallback if grab cursor is unsupported */
+    cursor: -moz-grabbing;
+    cursor: grab;
+    position: absolute;
+
+}
+
+.BlackKing:active{
+    cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+    position: absolute;
+}
+
+.BlackQueen{
+    cursor: move; /* fallback if grab cursor is unsupported */
+    cursor: -moz-grabbing;
+    cursor: grab;
+    position: absolute;
+
+}
+
+.BlackQueen:active{
+        cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+    position: absolute;
+}
+
+#input-message{
+    width: 320px;
+    background-color: rgb(157, 152, 152);
+    overflow:hidden;
+    border: 0px;
+}
+
+#input-message:active{
+    overflow: hidden;
+    border: 0px;
+}
+
+*{
+    overflow:hidden;
+
 }
